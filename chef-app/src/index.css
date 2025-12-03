@@ -1,13 +1,40 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer components {
-  .header-text {
-    @apply text-[3rem] font-bold text-[#D65A31];
+  .container {
+    @apply bg-[#FDFFF5] mx-auto border-4 rounded-[0.2rem] border-[#EEEEEE];
   }
+  .header {
+    @apply flex justify-center bg-[#fff] border-b-2 border-b-[#EEEEEE];
+  }
+  .header-text {
+    @apply text-[1.8rem] md:text-[2.5rem] font-bold text-[#D65A31] text-center capitalize;
+  }
+  .logo {
+    @apply rounded-[50%] w-[3rem] h-[3rem] md:w-[4rem] md:h-[4rem] mr-3 mb-1;
+  }
+  .input-div {
+    @apply mt-[3rem] md:mt-[5rem] mb-[2rem] flex md:justify-around justify-evenly;
+  }
+  .add-icon {
+    @apply w-[2rem] h-[2rem] mx-2 mt-1;
+  }
+  .add-btn {
+    @apply bg-[#333] text-[#fff] md:w-[30%] flex justify-center rounded-[0.3rem];
+  }
+  .add-btn:hover {
+    @apply text-[#a7a1a1] rounded-[1rem];
+  }
+}
+
+input {
+  @apply bg-[#fff] w-[80%] md:w-[60%] border-2 border-[#EEEEEE] p-2 rounded-[0.3rem];
+}
+input::placeholder {
+  @apply text-[1.3rem] p-1;
+}
+span {
+  @apply md:mt-1 md:capitalize md:text-[1.2rem] hidden md:block;
 }
 
  /* #F14A00 #C62300
